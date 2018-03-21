@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		251195362062527C0019E0A8 /* CHCSVParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 251195342062527C0019E0A8 /* CHCSVParser.m */; };
 		EA0FAFA81919E6C8002B2305 /* demo.csv in Resources */ = {isa = PBXBuildFile; fileRef = EA0FAFA71919E6C8002B2305 /* demo.csv */; };
 		EA0FAFAB1919ECB4002B2305 /* DisplayTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA0FAFAA1919ECB4002B2305 /* DisplayTableViewController.m */; };
 		EA0FAFAE1919ECE7002B2305 /* TableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EA0FAFAD1919ECE7002B2305 /* TableCell.m */; };
@@ -25,7 +26,6 @@
 		EA7674C91918B1B6006985FC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA7674A81918B1B6006985FC /* UIKit.framework */; };
 		EA7674D11918B1B6006985FC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EA7674CF1918B1B6006985FC /* InfoPlist.strings */; };
 		EA7674D31918B1B6006985FC /* SampleProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7674D21918B1B6006985FC /* SampleProjectTests.m */; };
-		EA7674F41918D037006985FC /* CHCSVParser.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7674F31918D037006985FC /* CHCSVParser.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		251195332062527C0019E0A8 /* CHCSVParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHCSVParser.h; sourceTree = "<group>"; };
+		251195342062527C0019E0A8 /* CHCSVParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHCSVParser.m; sourceTree = "<group>"; };
 		EA0FAFA71919E6C8002B2305 /* demo.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = demo.csv; sourceTree = "<group>"; };
 		EA0FAFA91919ECB4002B2305 /* DisplayTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DisplayTableViewController.h; sourceTree = "<group>"; };
 		EA0FAFAA1919ECB4002B2305 /* DisplayTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DisplayTableViewController.m; sourceTree = "<group>"; };
@@ -51,7 +53,6 @@
 		EA7674AC1918B1B6006985FC /* SampleProject-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SampleProject-Info.plist"; sourceTree = "<group>"; };
 		EA7674AE1918B1B6006985FC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		EA7674B01918B1B6006985FC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		EA7674B21918B1B6006985FC /* SampleProject-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SampleProject-Prefix.pch"; sourceTree = "<group>"; };
 		EA7674B31918B1B6006985FC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		EA7674B41918B1B6006985FC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		EA7674B71918B1B6006985FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
@@ -64,8 +65,6 @@
 		EA7674CE1918B1B6006985FC /* SampleProjectTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SampleProjectTests-Info.plist"; sourceTree = "<group>"; };
 		EA7674D01918B1B6006985FC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		EA7674D21918B1B6006985FC /* SampleProjectTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SampleProjectTests.m; sourceTree = "<group>"; };
-		EA7674F21918D037006985FC /* CHCSVParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHCSVParser.h; sourceTree = "<group>"; };
-		EA7674F31918D037006985FC /* CHCSVParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHCSVParser.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +91,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		251195312062527C0019E0A8 /* CHCSVParser */ = {
+			isa = PBXGroup;
+			children = (
+				251195332062527C0019E0A8 /* CHCSVParser.h */,
+				251195342062527C0019E0A8 /* CHCSVParser.m */,
+			);
+			path = CHCSVParser;
+			sourceTree = "<group>";
+		};
 		EA7674981918B1B6006985FC = {
 			isa = PBXGroup;
 			children = (
@@ -125,6 +133,7 @@
 		EA7674AA1918B1B6006985FC /* SampleProject */ = {
 			isa = PBXGroup;
 			children = (
+				251195312062527C0019E0A8 /* CHCSVParser */,
 				EA7674B31918B1B6006985FC /* AppDelegate.h */,
 				EA7674B41918B1B6006985FC /* AppDelegate.m */,
 				EA7674B61918B1B6006985FC /* Main_iPhone.storyboard */,
@@ -149,7 +158,6 @@
 				EA7674AC1918B1B6006985FC /* SampleProject-Info.plist */,
 				EA7674AD1918B1B6006985FC /* InfoPlist.strings */,
 				EA7674B01918B1B6006985FC /* main.m */,
-				EA7674B21918B1B6006985FC /* SampleProject-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -175,18 +183,8 @@
 		EA7674DC1918BDE8006985FC /* ThirdParty */ = {
 			isa = PBXGroup;
 			children = (
-				EA7674F11918D037006985FC /* CHCSV */,
 			);
 			path = ThirdParty;
-			sourceTree = "<group>";
-		};
-		EA7674F11918D037006985FC /* CHCSV */ = {
-			isa = PBXGroup;
-			children = (
-				EA7674F21918D037006985FC /* CHCSVParser.h */,
-				EA7674F31918D037006985FC /* CHCSVParser.m */,
-			);
-			path = CHCSV;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -291,7 +289,7 @@
 				EA0FAFAE1919ECE7002B2305 /* TableCell.m in Sources */,
 				EA7674BE1918B1B6006985FC /* ViewController.m in Sources */,
 				EA7674B51918B1B6006985FC /* AppDelegate.m in Sources */,
-				EA7674F41918D037006985FC /* CHCSVParser.m in Sources */,
+				251195362062527C0019E0A8 /* CHCSVParser.m in Sources */,
 				EA0FAFAB1919ECB4002B2305 /* DisplayTableViewController.m in Sources */,
 				EA7674B11918B1B6006985FC /* main.m in Sources */,
 			);
@@ -428,8 +426,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "SampleProject/SampleProject-Prefix.pch";
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = "SampleProject/SampleProject-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -441,8 +439,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "SampleProject/SampleProject-Prefix.pch";
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = "SampleProject/SampleProject-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;

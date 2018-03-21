@@ -29,7 +29,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    CHCSVParser *parser=[[CHCSVParser alloc] initWithContentsOfCSVFile:[NSHomeDirectory() stringByAppendingPathComponent:@"demo.csv"] delimiter:','];
+    NSLog(@"----");
+    NSLog(@"%@", NSHomeDirectory());
+    
+    CHCSVParser *parser=[[CHCSVParser alloc] initWithContentsOfCSVFile:[NSHomeDirectory() stringByAppendingPathComponent:@"1.csv"] delimiter:'|'];
+ 
     parser.delegate=self;
     [parser parse];
 

@@ -54,7 +54,7 @@
 
 -(void)parser:(CHCSVParser *)parser didReadField:(NSString *)field atIndex:(NSInteger)fieldIndex
 {
-    [dict setObject:field forKey:[NSString stringWithFormat:@"%d",fieldIndex]];
+    [dict setObject:field forKey:[NSString stringWithFormat:@"%ld",(long)fieldIndex]];
 }
 
 - (void) parser:(CHCSVParser *)parser didEndLine:(NSUInteger)lineNumber
@@ -71,7 +71,7 @@
     [parser parse];
     
     CHCSVWriter *csvWriter=[[CHCSVWriter alloc]initForWritingToCSVFile:[NSHomeDirectory() stringByAppendingPathComponent:@"demo.csv"]];
-    NSLog(@"%d",[currentRow count]);
+    NSLog(@"%lu",(unsigned long)[currentRow count]);
     
     [csvWriter writeField:@"Roll Number"];
     [csvWriter writeField:@"Name"];
