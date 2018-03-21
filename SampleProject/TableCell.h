@@ -12,5 +12,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *lblRno;
 @property (weak, nonatomic) IBOutlet UILabel *lblName;
 @property (weak, nonatomic) IBOutlet UILabel *lblMarks;
+@property (weak, nonatomic) IBOutlet UILabel *M2;
+@property (weak, nonatomic) IBOutlet UILabel *Arrired;
 
 @end

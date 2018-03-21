@@ -32,8 +32,12 @@
     NSLog(@"----");
     NSLog(@"%@", NSHomeDirectory());
     
-    CHCSVParser *parser=[[CHCSVParser alloc] initWithContentsOfCSVFile:[NSHomeDirectory() stringByAppendingPathComponent:@"1.csv"] delimiter:'|'];
- 
+    
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"flight" ofType:@"csv"];
+    
+    CHCSVParser *parser=[[CHCSVParser alloc] initWithContentsOfCSVFile:path delimiter:','];
+
+    
     parser.delegate=self;
     [parser parse];
 
@@ -106,9 +110,11 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     TableCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
-    [cell.lblRno setText:[[currentRow objectAtIndex:indexPath.row] valueForKey:[NSString stringWithFormat:@"0"]]];
-    [cell.lblName setText:[[currentRow objectAtIndex:indexPath.row] valueForKey:[NSString stringWithFormat:@"1"]]];
-    [cell.lblMarks setText:[[currentRow objectAtIndex:indexPath.row] valueForKey:[NSString stringWithFormat:@"2"]]];
+    [cell.lblRno setText:[[currentRow objectAtIndex:indexPath.row] valueForKey:[NSString stringWithFormat:@"3"]]];
+    [cell.lblName setText:[[currentRow objectAtIndex:indexPath.row] valueForKey:[NSString stringWithFormat:@"5"]]];
+    [cell.lblMarks setText:[[currentRow objectAtIndex:indexPath.row] valueForKey:[NSString stringWithFormat:@"12"]]];
+    [cell.M2 setText:[[currentRow objectAtIndex:indexPath.row] valueForKey:[NSString stringWithFormat:@"3"]]];
+    [cell.Arrired setText:[[currentRow objectAtIndex:indexPath.row] valueForKey:[NSString stringWithFormat:@"13"]]];
     return cell;
 }
 

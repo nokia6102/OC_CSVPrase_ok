@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		251195362062527C0019E0A8 /* CHCSVParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 251195342062527C0019E0A8 /* CHCSVParser.m */; };
+		2511954320625D9F0019E0A8 /* flight.csv in Resources */ = {isa = PBXBuildFile; fileRef = 2511954220625D9F0019E0A8 /* flight.csv */; };
 		EA0FAFA81919E6C8002B2305 /* demo.csv in Resources */ = {isa = PBXBuildFile; fileRef = EA0FAFA71919E6C8002B2305 /* demo.csv */; };
 		EA0FAFAB1919ECB4002B2305 /* DisplayTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA0FAFAA1919ECB4002B2305 /* DisplayTableViewController.m */; };
 		EA0FAFAE1919ECE7002B2305 /* TableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EA0FAFAD1919ECE7002B2305 /* TableCell.m */; };
@@ -41,6 +42,7 @@
 /* Begin PBXFileReference section */
 		251195332062527C0019E0A8 /* CHCSVParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHCSVParser.h; sourceTree = "<group>"; };
 		251195342062527C0019E0A8 /* CHCSVParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHCSVParser.m; sourceTree = "<group>"; };
+		2511954220625D9F0019E0A8 /* flight.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = flight.csv; sourceTree = "<group>"; };
 		EA0FAFA71919E6C8002B2305 /* demo.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = demo.csv; sourceTree = "<group>"; };
 		EA0FAFA91919ECB4002B2305 /* DisplayTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DisplayTableViewController.h; sourceTree = "<group>"; };
 		EA0FAFAA1919ECB4002B2305 /* DisplayTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DisplayTableViewController.m; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 		EA7674AA1918B1B6006985FC /* SampleProject */ = {
 			isa = PBXGroup;
 			children = (
+				2511954220625D9F0019E0A8 /* flight.csv */,
 				251195312062527C0019E0A8 /* CHCSVParser */,
 				EA7674B31918B1B6006985FC /* AppDelegate.h */,
 				EA7674B41918B1B6006985FC /* AppDelegate.m */,
@@ -267,6 +270,7 @@
 				EA7674C01918B1B6006985FC /* Images.xcassets in Resources */,
 				EA0FAFA81919E6C8002B2305 /* demo.csv in Resources */,
 				EA7674B81918B1B6006985FC /* Main_iPhone.storyboard in Resources */,
+				2511954320625D9F0019E0A8 /* flight.csv in Resources */,
 				EA7674AF1918B1B6006985FC /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
