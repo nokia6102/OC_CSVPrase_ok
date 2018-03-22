@@ -10,14 +10,12 @@
 #import "CHCSVParser.h"
 @interface ViewController : UIViewController<CHCSVParserDelegate>
 
-- (IBAction)btnWrite:(id)sender;
-- (IBAction)btnDismissKeyboardClicked:(id)sender;
+
+
+@property (weak, nonatomic) IBOutlet UITextField *company;
+@property (weak, nonatomic) IBOutlet UITextField *arried;
+
  
-
-@property (weak, nonatomic) IBOutlet UITextField *txtRno;
-@property (weak, nonatomic) IBOutlet UITextField *txtName;
-@property (weak, nonatomic) IBOutlet UITextField *txtMarks;
-
 
 
 @end

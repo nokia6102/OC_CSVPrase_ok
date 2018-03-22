@@ -27,6 +27,8 @@
     return self;
 }
 
+ 
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -66,12 +68,14 @@
     for(int i=0;i<[currentRow count];i++)
     {   NSString *companyCode =[[currentRow objectAtIndex:i] valueForKey:[NSString stringWithFormat:@"2"]];
         NSString *arriedCity =[[currentRow objectAtIndex:i] valueForKey:[NSString stringWithFormat:@"12"]];
-        if ([companyCode  isEqual: @"BR"]   &&  [arriedCity  isEqual:  @"香港"]   )
+        NSString *compartCompany = [[NSUserDefaults standardUserDefaults] objectForKey:@"Company"];
+         NSString *compartArried= [[NSUserDefaults standardUserDefaults] objectForKey:@"Arried"];
+        
+        if ([companyCode  isEqual: compartCompany]   &&  [arriedCity  isEqual:  compartArried]   )
         {
             NSLog(@"--- %@ ---- ", [currentRow objectAtIndex:i]);
             id myArrayElement = [currentRow objectAtIndex:i];
-//            [currentRowSepc addObject:currentRow[i] ];
-//            [currentRowSepc addObjectsFromArray: myArrayElement ];
+ 
             [currentRowSepc addObject:myArrayElement];
         NSLog(@"%@          %@          %@",[[currentRow objectAtIndex:i] valueForKey:[NSString stringWithFormat:@"0"]],[[currentRow objectAtIndex:i] valueForKey:[NSString stringWithFormat:@"1"]],[[currentRow objectAtIndex:i] valueForKey:[NSString stringWithFormat:@"2"]]);
         }

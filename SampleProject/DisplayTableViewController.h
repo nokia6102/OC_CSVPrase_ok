@@ -10,5 +10,11 @@
 #import "CHCSVParser.h"
 #import "TableCell.h"
 @interface DisplayTableViewController : UITableViewController<CHCSVParserDelegate>
+{
+    NSString *company;
+    NSString *arried;
+}
 
 @end
+
+ 

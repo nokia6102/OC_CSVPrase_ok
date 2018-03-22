@@ -16,6 +16,10 @@
 
 @implementation NSData (EasyUTF8)
 
+
+
+ 
+
 - (NSData *)asUTF8String {                          // https://stackoverflow.com/questions/17581447/objective-c-read-file-wrong-encoding
 
     NSStringEncoding encoding = CFStringConvertEncodingToNSStringEncoding(kCFStringEncodingMacChineseTrad);     //下載csv修正為繁中
@@ -41,7 +45,7 @@
     NSMutableArray *currentRow;
     NSString * input;
 }
-@synthesize txtMarks,txtName,txtRno;
+// @synthesize txtMarks,txtName,txtRno;
 
 
 
@@ -123,7 +127,9 @@
 - (IBAction)btnWrite:(id)sender
 {
     
-    
+    [[NSUserDefaults standardUserDefaults] setValue:_company.text   forKey:@"Company"];
+    [[NSUserDefaults standardUserDefaults] setValue:_arried.text forKey:@"Arried"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
     
     
     //--- 以下是從公開資料網下載資料opendata
@@ -180,8 +186,31 @@
 
 - (IBAction)btnDismissKeyboardClicked:(id)sender
 {
-    [txtRno resignFirstResponder];
-    [txtName resignFirstResponder];
-    [txtMarks resignFirstResponder];
+//    [txtRno resignFirstResponder];
+//    [txtName resignFirstResponder];
+//    [txtMarks resignFirstResponder];
+}
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+    
+    //將page2設定成Storyboard Segue的目標UIViewController
+ 
+    
+    //將值透過Storyboard Segue帶給頁面2的string變數
+    
+    
+    // Pass any objects to the view controller here, like...
+ 
+  
+}
+
+- (IBAction)companyChange:(id)sender {
+}
+
+- (IBAction)arriedChange:(id)sender {
 }
 @end
