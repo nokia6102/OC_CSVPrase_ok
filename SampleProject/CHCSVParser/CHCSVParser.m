@@ -80,6 +80,7 @@ NSString *const CHCSVErrorDomain = @"com.davedelong.csv";
 - (instancetype)initWithContentsOfDelimitedURL:(NSURL *)URL delimiter:(unichar)delimiter {
     NSInputStream *stream = [NSInputStream inputStreamWithURL:URL];
     return [self initWithInputStream:stream usedEncoding:NULL delimiter:delimiter];
+//    return [self initWithInputStream:stream usedEncoding: delimiter:delimiter];
 }
 
 - (id)initWithInputStream:(NSInputStream *)stream usedEncoding:(NSStringEncoding *)encoding delimiter:(unichar)delimiter {

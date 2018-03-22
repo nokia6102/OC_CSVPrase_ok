@@ -12,6 +12,7 @@
 
 - (IBAction)btnWrite:(id)sender;
 - (IBAction)btnDismissKeyboardClicked:(id)sender;
+ 
 
 @property (weak, nonatomic) IBOutlet UITextField *txtRno;
 @property (weak, nonatomic) IBOutlet UITextField *txtName;

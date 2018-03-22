@@ -16,6 +16,7 @@
 {
     NSMutableDictionary *dict;
     NSMutableArray *currentRow;
+     NSMutableArray *currentRowSepc;
 }
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -33,7 +34,12 @@
     NSLog(@"%@", NSHomeDirectory());
     
     
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"flight" ofType:@"csv"];
+    NSArray       *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString  *documentsDirectory = [paths objectAtIndex:0];
+    NSString  *filePath = [NSString stringWithFormat:@"%@/%@", documentsDirectory,@"downloadFight.csv" ]  ;
+    
+    NSString *path = filePath;
+//    NSString *path = [[NSBundle mainBundle] pathForResource:@"flight" ofType:@"csv"];
     
     CHCSVParser *parser=[[CHCSVParser alloc] initWithContentsOfCSVFile:path delimiter:','];
 
@@ -51,14 +57,26 @@
 -(void) parserDidBeginDocument:(CHCSVParser *)parser
 {
     currentRow = [[NSMutableArray alloc] init];
+    currentRowSepc = [NSMutableArray arrayWithObjects:dict,nil];
 }
 
 -(void) parserDidEndDocument:(CHCSVParser *)parser
 {
+    
     for(int i=0;i<[currentRow count];i++)
-    {
+    {   NSString *companyCode =[[currentRow objectAtIndex:i] valueForKey:[NSString stringWithFormat:@"2"]];
+        NSString *arriedCity =[[currentRow objectAtIndex:i] valueForKey:[NSString stringWithFormat:@"12"]];
+        if ([companyCode  isEqual: @"BR"]   &&  [arriedCity  isEqual:  @"香港"]   )
+        {
+            NSLog(@"--- %@ ---- ", [currentRow objectAtIndex:i]);
+            id myArrayElement = [currentRow objectAtIndex:i];
+//            [currentRowSepc addObject:currentRow[i] ];
+//            [currentRowSepc addObjectsFromArray: myArrayElement ];
+            [currentRowSepc addObject:myArrayElement];
         NSLog(@"%@          %@          %@",[[currentRow objectAtIndex:i] valueForKey:[NSString stringWithFormat:@"0"]],[[currentRow objectAtIndex:i] valueForKey:[NSString stringWithFormat:@"1"]],[[currentRow objectAtIndex:i] valueForKey:[NSString stringWithFormat:@"2"]]);
+        }
     }
+    NSLog(@"123");
 }
 
 - (void) parser:(CHCSVParser *)parser didFailWithError:(NSError *)error
@@ -102,20 +120,23 @@
 {
 
     // Return the number of rows in the section.
-    NSLog(@"counttt %d",[currentRow count]);
-    return [currentRow count];
+    NSLog(@"counttt %d",[currentRowSepc count]);
+    return [currentRowSepc count];
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     TableCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
-    [cell.lblRno setText:[[currentRow objectAtIndex:indexPath.row] valueForKey:[NSString stringWithFormat:@"3"]]];
-    [cell.lblName setText:[[currentRow objectAtIndex:indexPath.row] valueForKey:[NSString stringWithFormat:@"5"]]];
-    [cell.lblMarks setText:[[currentRow objectAtIndex:indexPath.row] valueForKey:[NSString stringWithFormat:@"12"]]];
-    [cell.M2 setText:[[currentRow objectAtIndex:indexPath.row] valueForKey:[NSString stringWithFormat:@"3"]]];
-    [cell.Arrired setText:[[currentRow objectAtIndex:indexPath.row] valueForKey:[NSString stringWithFormat:@"13"]]];
+    
+    [cell.lblRno setText:[[currentRowSepc objectAtIndex:indexPath.row] valueForKey:[NSString stringWithFormat:@"3"]]];
+    [cell.lblName setText:[[currentRowSepc objectAtIndex:indexPath.row] valueForKey:[NSString stringWithFormat:@"5"]]];
+    [cell.lblMarks setText:[[currentRowSepc objectAtIndex:indexPath.row] valueForKey:[NSString stringWithFormat:@"12"]]];
+    [cell.M2 setText:[[currentRowSepc objectAtIndex:indexPath.row] valueForKey:[NSString stringWithFormat:@"6"]]];
+    [cell.Arrired setText:[[currentRowSepc objectAtIndex:indexPath.row] valueForKey:[NSString stringWithFormat:@"13"]]];
+
     return cell;
+    
 }
 
 
